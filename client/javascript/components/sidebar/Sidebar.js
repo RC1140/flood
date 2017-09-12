@@ -2,6 +2,7 @@ import {FormattedMessage} from 'react-intl';
 import React from 'react';
 
 import ClientStats from './TransferData';
+import DiskStats from './DiskData';
 import CustomScrollbars from '../general/CustomScrollbars';
 import EventTypes from '../../constants/EventTypes';
 import FeedsButton from './FeedsButton';
@@ -58,6 +59,7 @@ class Sidebar extends React.Component {
         <StatusFilters />
         <TagFilters />
         <TrackerFilters />
+        <DiskStats />
       </CustomScrollbars>
     );
   }

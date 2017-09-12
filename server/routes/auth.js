@@ -9,6 +9,7 @@ const router = express.Router();
 const Users = require('../models/Users');
 
 const failedLoginResponse = 'Failed login.';
+const Server = require('../models/Server');
 
 const setAuthToken = (res, username) => {
   let expirationSeconds = 60 * 60 * 24 * 7; // one week
@@ -113,5 +114,12 @@ router.put('/users', (req, res, next) => {
     password: req.body.password
   }, ajaxUtil.getResponseFn(res));
 });
+
+router.get('/usage-stats', function(req, res, next) {
+//    return res.json({success: true});
+    //console.log('test');
+    Server.getDiskUsageStats(ajaxUtil.getResponseFn(res));
+});
+
 
 module.exports = router;

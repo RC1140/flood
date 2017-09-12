@@ -53,7 +53,7 @@ class TransferDataStoreClass extends BaseStore {
     this.emit(EventTypes.CLIENT_TRANSFER_HISTORY_REQUEST_ERROR);
   }
 
-  handleFetchTransferHistorySuccess(transferData) {
+    handleFetchTransferHistorySuccess(transferData) {
     this.transferRates = transferData;
     this.emit(EventTypes.CLIENT_TRANSFER_HISTORY_REQUEST_SUCCESS);
   }

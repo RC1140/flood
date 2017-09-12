@@ -4,6 +4,7 @@ const multer = require('multer');
 
 const ajaxUtil = require('../util/ajaxUtil');
 const client = require('../models/client');
+const Server = require('../models/Server');
 const clientRequestService = require('../services/clientRequestService');
 const router = express.Router();
 

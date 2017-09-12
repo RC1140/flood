@@ -375,7 +375,15 @@ var client = {
       callback(response, error);
     });
     request.send();
-  }
+  },
+
+  getDiskUsageStats: (hash, callback) => {
+      let request = new ClientRequest();
+      request.getDiskUsageStats({});
+      request.postProcess(clientResponseUtil.processTorrentDetails);
+      request.onComplete(callback);
+      request.send();
+    }
 };
 
 module.exports = client;

@@ -91,6 +91,8 @@ export default {
   'filter.tag.title': 'Filter by Tag',
   'filter.untagged': 'Untagged',
 
+  'diskstats.title': 'Disk Usage',
+
   'general.ago': 'ago',
   'general.at': 'at',
   'general.to': 'to',
